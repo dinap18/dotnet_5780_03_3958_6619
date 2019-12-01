@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dotnet_5780_03_3958_6619"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="640" Width="800">
+    <Grid Name="MainGrid" Margin="0,0,3.333,-0.333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <Grid Name ="UpGrid" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Height="auto" Margin="153,181,0,0" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Stretch" Width="auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox x:Name="cbHostList" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="120" Grid.Column="0">
+                <TextBox x:Name="tbHostName" Height="293" TextWrapping="Wrap" Text="{Binding Path=HostName}" Width="401" FontSize="30"
+                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" RenderTransformOrigin="0.5,0.5" BorderThickness="4"     />
+            </ComboBox>
+        </Grid>
     </Grid>
+
+
 </Window>
